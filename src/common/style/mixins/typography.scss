@@ -1,0 +1,52 @@
+@import "../variables/colors";
+
+@mixin opensans {
+  font-family: "Open Sans";
+  font-size: 1rem;
+}
+
+@mixin lato {
+  font-family: Lato, "Open Sans";
+  font-size: 1rem;
+}
+
+@mixin headers {
+  @include opensans;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+@mixin headers-large {
+  @include headers;
+  font-size: 3rem;
+}
+
+@mixin headers-medium {
+  @include headers;
+  font-size: 2rem;
+}
+
+@mixin headers-medium-bold {
+  @include headers-medium;
+  font-weight: 700;
+}
+
+@mixin headers-bold-medium {
+  @include headers-medium-bold;
+}
+
+@mixin headers-bold {
+  @include headers;
+  font-weight: 700;
+}
+
+@mixin headers-bold-large {
+  @include headers-large;
+  @include headers-bold;
+  font-size: 3rem;
+}
+
+@mixin headers-italic {
+  @include headers;
+  font-style: italic;
+}

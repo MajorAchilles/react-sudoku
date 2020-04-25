@@ -1,0 +1,4 @@
+node_modules/
+*.lock
+**/*.scss.d.ts
+**/.DS_Store

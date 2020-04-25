@@ -1,0 +1,19 @@
+@import "../common/style/variables/colors";
+@import "../common/style/variables/dimensions";
+@import "../common/style/mixins/typography";
+@import "../common/style/mixins/breakpoints";
+
+$border-color: #1243cb;
+
+.content-div {
+  @include phone-only {
+    @include headers;
+
+    border: 1px solid $border-color;
+    padding: $spacing-larger;
+  }
+
+  @include headers-large;
+  border: 1px solid $background-orange;
+  padding: $spacing-100;
+}

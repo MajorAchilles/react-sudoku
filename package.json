@@ -1,0 +1,54 @@
+{
+  "name": "react-sudoko",
+  "version": "1.5.0",
+  "description": "React Sudoku",
+  "main": "src/index.js",
+  "author": "Amlanjyoti Saikia",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode=production",
+    "lint": "eslint . --ext .js,.jsx",
+    "lint:style": "sass-lint -v -q -c '.sass-lint.yml'"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "axios": "^0.19.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-json": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prefer-object-spread": "^1.2.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "husky": "^4.2.1",
+    "prettier": "^2.0.5",
+    "sass-lint": "^1.13.1",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn lint:style",
+      "pre-push": "yarn lint && yarn lint:style"
+    }
+  }
+}

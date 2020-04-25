@@ -1,0 +1,21 @@
+$phone: 599px;
+$tablet-portrait: 600px;
+$tablet-landscape: 900px;
+$desktop-small: 1200px;
+$desktop-large: 1800px;
+
+@mixin phone-only {
+  @media (max-width: $phone) { @content; }
+}
+@mixin at-least-tablet-portrait {
+  @media (min-width: $tablet-portrait) { @content; }
+}
+@mixin at-least-tablet-landscape {
+  @media (min-width: $tablet-landscape) { @content; }
+}
+@mixin at-least-desktop-small {
+  @media (min-width: $desktop-small) { @content; }
+}
+@mixin at-least-desktop-large {
+  @media (min-width: $desktop-large) { @content; }
+}
